@@ -1,0 +1,14 @@
+schema_version = "1.0.0"
+id = "send2ue"
+name = "Send to Unreal"
+version = "3.0.0"
+tagline = "Sends an asset to the first open Unreal Editor instance on your machine."
+maintainer = "Community"
+type = "add-on"
+tags = ["Pipeline", "Unreal", "Export"]
+blender_version_min = "4.2.0"
+license = ["SPDX:GPL-3.0-or-later"]
+website = "https://github.com/ShadrGlitch/BlenderTools"
+copyright = [
+    "2024 Epic Games Inc (now a community fork)",
+]
