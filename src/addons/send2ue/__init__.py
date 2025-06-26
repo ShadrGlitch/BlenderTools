@@ -5,7 +5,7 @@ import os
 import importlib
 from . import operators, properties, constants
 from .dependencies import remote_execution, unreal
-from .ui import header_menu, addon_preferences, file_browser, dialog
+from .ui import header_menu, addon_preferences, file_browser, dialog, panel
 from .core import formatting, validations, settings, utilities, export, ingest, extension, io
 
 modules = [
@@ -42,6 +42,7 @@ def register():
         operators.register()
         header_menu.register()
         addon_preferences.register()
+        panel.register()
     except RuntimeError as error:
         print(error)
     bpy.app.handlers.load_post.append(bpy.app.handlers.persistent(utilities.setup_project))
@@ -58,6 +59,7 @@ def unregister():
         header_menu.remove_parent_menu()
         header_menu.unregister()
         addon_preferences.unregister()
+        panel.unregister()
         operators.unregister()
         properties.unregister()
     except RuntimeError as error:
